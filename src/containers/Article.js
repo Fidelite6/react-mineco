@@ -12,12 +12,14 @@ class Article extends Component{
         this.handleClick = handleClick.bind(this);
     }
 
+    // stage-3 code TODO:: research compile
     // state = {
     //     isOpen: false
     // }
 
     render(){
         const {article} = this.props
+
         const body = this.state.isOpen && <section> {article.text} </section>
         return (
             <div>
@@ -46,4 +48,5 @@ function handleClick() {
         isOpen: !this.state.isOpen
     })
 }
+
 export default Article
